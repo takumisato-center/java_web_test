@@ -5,10 +5,6 @@ body {
     padding-top: 50px;
 }
 
-ul {
-    list-style-type: none; /* デフォルトのリストマーカーを消します */
-    text-align: left; /* リストのテキストを左揃えにします */
-}
 .container {
     background-color: white;
     padding: 30px;
