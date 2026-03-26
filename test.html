@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スコアリーディング・ノート</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px; /* 画面が広すぎても読みやすいように最大幅を設定 */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+
+        h1 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* スマホ閲覧時に表がはみ出た場合、横スクロールさせるためのコンテナ */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        /* 表のスタイル */
+        .score-log-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px; /* スマホでもこの幅を保ち、横スクロールさせる */
+        }
+
+        .score-log-table th, 
+        .score-log-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            vertical-align: top; /* 文字を上揃えにする */
+        }
+
+        .score-log-table th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: bold;
+            text-align: left;
+            white-space: nowrap; /* 見出しは改行しない */
+        }
+
+        /* 各列の幅の目安を設定 */
+        .col-measure { width: 12%; }
+        .col-instrument { width: 15%; }
+        .col-note { width: 43%; }
+        .col-media { width: 30%; }
+
+        /* 画像と音声のスタイル */
+        .media-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 250px; /* 音声プレイヤーが大きくなりすぎないように */
+            outline: none;
+        }
+
+        /* 練習番号の強調 */
+        .mark {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>交響曲第◯番 スコアリーディングの気づき</h1>
+    <p>第1楽章のオーケストレーションについて、スコアを読んで気づいた点をまとめました。</p>
+
+    <div class="table-container">
+        <table class="score-log-table">
+            <thead>
+                <tr>
+                    <th class="col-measure">練習番号 / 小節</th>
+                    <th class="col-instrument">対象楽器</th>
+                    <th class="col-note">気づき・考察</th>
+                    <th class="col-media">参考資料 (画像/音声)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="mark">[A]</span><br>
+                        10小節〜
+                    </td>
+                    <td>木管群</td>
+                    <td>オーボエとクラリネットのユニゾンが、独特の哀愁を出している。和声は意外にも単純だが、楽器の組み合わせの妙で複雑に聞こえる。</td>
+                    <td>
+                        <img src="https://via.placeholder.com/300x150?text=Score+Image+A" alt="スコア画像A" class="media-img">
+                        <audio controls src="sample-audio-a.mp3"></audio>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span class="mark">[B]</span><br>
+                        24小節〜
+                    </td>
+                    <td>Vc, Cb<br>(低音弦)</td>
+                    <td>ここから低音弦のピッツィカートがポリリズムを刻み始める。緊迫感の源泉。上のメロディとは全く違う拍子感で動いている点に注目。</td>
+                    <td>
+                        <img src="https://via.placeholder.com/300x150?text=Rhythm+Analysis" alt="リズム解説画像" class="media-img">
+                        <audio controls src="sample-audio-b.mp3"></audio>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span class="mark">[C]</span><br>
+                        40小節〜
+                    </td>
+                    <td>全体<br>(Tutti)</td>
+                    <td>トゥッティ（全奏）。金管の配置が非常に立体的で、特にホルンの使い方が対位法的になっている。</td>
+                    <td>
+                        <img src="https://via.placeholder.com/300x150?text=Score+Image+C" alt="スコア画像C" class="media-img">
+                        <audio controls src="sample-audio-c.mp3"></audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
