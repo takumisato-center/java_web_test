@@ -7,7 +7,6 @@ body {
 
 ul {
     list-style-type: none; /* デフォルトのリストマーカーを消します */
-    padding: 0; /* リストの内側の余白を消します */
     text-align: left; /* リストのテキストを左揃えにします */
 }
 .container {
