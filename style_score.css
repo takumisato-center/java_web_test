@@ -1,0 +1,80 @@
+        /* 全体のスタイル */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px; /* 画面が広すぎても読みやすいように最大幅を設定 */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+
+        h1 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* スマホ閲覧時に表がはみ出た場合、横スクロールさせるためのコンテナ */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        /* 表のスタイル */
+        .score-log-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px; /* スマホでもこの幅を保ち、横スクロールさせる */
+        }
+
+        .score-log-table th, 
+        .score-log-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            vertical-align: top; /* 文字を上揃えにする */
+        }
+
+        .score-log-table th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: bold;
+            text-align: left;
+            white-space: nowrap; /* 見出しは改行しない */
+        }
+
+        /* 各列の幅の目安を設定 */
+        .col-measure { width: 12%; }
+        .col-instrument { width: 15%; }
+        .col-note { width: 43%; }
+        .col-media { width: 30%; }
+
+        /* 画像と音声のスタイル */
+        .media-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 250px; /* 音声プレイヤーが大きくなりすぎないように */
+            outline: none;
+        }
+
+        /* 練習番号の強調 */
+        .mark {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
